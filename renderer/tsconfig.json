@@ -1,0 +1,16 @@
+{
+    "compilerOptions": {
+        "esModuleInterop": true,
+        "module": "commonjs",
+        "target": "es2020",
+        "outDir": "./dist",
+        "rootDir": "./src",
+        "strict": false,
+        "allowSyntheticDefaultImports": true,
+        "skipLibCheck": true,
+        "useUnknownInCatchVariables": false,
+        "noImplicitAny": false,
+        "experimentalDecorators": true,
+        "emitDecoratorMetadata": true
+    }
+}

@@ -1,0 +1,1 @@
+(cd server && ./dev.sh) & (cd client && ./dev.sh) & (cd turbobuilt-file-system-vscode-plugin && ./dev.sh)

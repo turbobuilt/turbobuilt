@@ -1,0 +1,50 @@
+<script>
+//RENDER
+
+import {vModelText as _vModelText, createElementVNode as _createElementVNode, withDirectives as _withDirectives, createCommentVNode as _createCommentVNode, createTextVNode as _createTextVNode, openBlock as _openBlock, createElementBlock as _createElementBlock} from "https://smarthost.co:8008/node_modules/vue/dist/vue.esm-browser.js"
+
+const _hoisted_1 = {
+    class: "component-name"
+}
+
+export function render(_ctx, _cache) {
+    return (_openBlock(),
+    _createElementBlock("div", _hoisted_1, [_createTextVNode(" TESTS "), _withDirectives(_createElementVNode("input", {
+        "onUpdate:modelValue": _cache[0] || (_cache[0] = $event => ((_ctx.d.name) = $event))
+    }, null, 512 /* NEED_PATCH */
+    ), [[_vModelText, _ctx.d.name]]), _createCommentVNode(" <img src=\"getUpload({ id: 'main-image', index: 0}).url\" /> ")]))
+}
+
+//COMPONENT
+
+import {reactive} from "https://smarthost.co:8008/node_modules/vue/dist/vue.esm-browser.js";
+
+export default {
+    setup(__props, {expose: __expose}) {
+        __expose();
+
+        const {getUpload, registerUploads} = window.turbobuiltTools;
+        ;
+        const d = reactive({
+            name: "bob"
+        })
+
+        console.log("RUNNING SETUP")
+
+        const __returned__ = {
+            getUpload,
+            registerUploads,
+            d,
+            get reactive() {
+                return reactive
+            }
+        }
+        Object.defineProperty(__returned__, '__isScriptSetup', {
+            enumerable: false,
+            value: true
+        })
+        return __returned__
+    }
+
+}
+</script>

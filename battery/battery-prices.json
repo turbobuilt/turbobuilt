@@ -1,0 +1,121 @@
+[
+  {
+    "group": "24F",
+    "totalGroup": "24F",
+    "tier": "Standard",
+    "price": 69.74,
+    "cca": 585,
+    "query": "EverStart Value Group Size 24F auto battery"
+  },
+  {
+    "group": "24F",
+    "totalGroup": "24F",
+    "tier": "Better",
+    "price": 109.76,
+    "cca": 600,
+    "query": "EverStart Plus Group Size 24F auto battery"
+  },
+  {
+    "group": "24F",
+    "totalGroup": "24F",
+    "tier": "Best",
+    "price": 179.84,
+    "cca": 710,
+    "query": "EverStart Platinum AGM Group Size 24F auto battery"
+  },
+  {
+    "group": "35",
+    "totalGroup": "35",
+    "tier": "Standard",
+    "price": 69.74,
+    "cca": 490,
+    "query": "EverStart Value Group Size 35 auto battery"
+  },
+  {
+    "group": "35",
+    "totalGroup": "35",
+    "tier": "Better",
+    "price": 109.76,
+    "cca": 525,
+    "query": "EverStart Plus Group Size 35 auto battery"
+  },
+  {
+    "group": "35",
+    "totalGroup": "35",
+    "tier": "Best",
+    "price": 179.84,
+    "cca": 650,
+    "query": "EverStart Platinum AGM Group Size 35 auto battery"
+  },
+  {
+    "group": "47",
+    "totalGroup": "H5 / LN2 / 47",
+    "tier": "Better",
+    "price": 109.76,
+    "cca": 550,
+    "query": "EverStart Plus Group Size 47 auto battery"
+  },
+  {
+    "group": "47",
+    "totalGroup": "H5 / LN2 / 47",
+    "tier": "Best",
+    "price": 179.84,
+    "cca": 680,
+    "query": "EverStart Platinum AGM Group Size 47 auto battery"
+  },
+  {
+    "group": "48",
+    "totalGroup": "H6 / LN3 / 48",
+    "tier": "Standard",
+    "price": 69.74,
+    "cca": 615,
+    "query": "EverStart Value Group Size 48 auto battery"
+  },
+  {
+    "group": "48",
+    "totalGroup": "H6 / LN3 / 48",
+    "tier": "Better",
+    "price": 109.76,
+    "cca": 660,
+    "query": "EverStart Plus Group Size 48 auto battery"
+  },
+  {
+    "group": "48",
+    "tier": "Best",
+    "price": 179.84,
+    "cca": 760,
+    "query": "EverStart Platinum AGM Group Size 48 auto battery"
+  },
+  {
+    "group": "49",
+    "totalGroup": "H8 / LN5 / 49",
+    "tier": "Best",
+    "price": 179.84,
+    "cca": 900,
+    "query": "EverStart Platinum AGM Group Size 49 auto battery"
+  },
+  {
+    "group": "65",
+    "totalGroup": "65",
+    "tier": "Standard",
+    "price": 69.74,
+    "cca": 650,
+    "query": "EverStart Value Group Size 65 auto battery"
+  },
+  {
+    "group": "65",
+    "totalGroup": "65",
+    "tier": "Better",
+    "price": 109.76,
+    "cca": 750,
+    "query": "EverStart Plus Group Size 65 auto battery"
+  },
+  {
+    "group": "65",
+    "totalGroup": "65",
+    "tier": "Best",
+    "price": 189.84,
+    "cca": 750,
+    "query": "EverStart Platinum AGM Group Size 65 auto battery"
+  }
+]

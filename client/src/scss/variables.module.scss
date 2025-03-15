@@ -1,0 +1,32 @@
+$mobile: 768px;
+
+
+$primary: #7FE7CC;
+$secondary: #DFE38E;
+$tertiary: #EFCA8C;
+$error: #F17E7E;
+
+
+$primary: #7ECFC0;
+$secondary: #F2E3C9;
+$tertiary: #EC8F6A;
+$error: #EF4B4B;
+
+
+$primary: #75B79E;
+$secondary: #6A8CAF;
+$tertiary: #A7E9AF;
+$light: #EEF9BF;
+$error: #EF4B4B;
+
+.buttons {
+    display: flex;
+}
+
+:export {
+    primary: $primary;
+    secondary: $secondary;
+    tertiary: $tertiary;
+    error: $error;
+    mobile: $mobile;
+}

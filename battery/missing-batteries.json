@@ -1,0 +1,17 @@
+[
+  {
+    "group": "47",
+    "tier": "Value",
+    "query": "EverStart Value Group Size 47 auto battery"
+  },
+  {
+    "group": "49",
+    "tier": "Value",
+    "query": "EverStart Value Group Size 49 auto battery"
+  },
+  {
+    "group": "49",
+    "tier": "Plus",
+    "query": "EverStart Plus Group Size 49 auto battery"
+  }
+]

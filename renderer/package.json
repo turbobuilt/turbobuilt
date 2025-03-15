@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "acme-client": "^5.4.0",
+    "quickjs-emscripten": "^0.29.2"
+  },
+  "devDependencies": {
+    "@types/bun": "^1.1.6",
+    "@types/node": "^20.14.11"
+  }
+}

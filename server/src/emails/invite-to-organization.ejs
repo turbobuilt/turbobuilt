@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>Invitation to Join <%= organization.name %></title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            font-family: Arial, sans-serif;
+            color: #333333;
+        }
+        .container {
+            max-width: 480px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 24px;
+            text-align: center;
+        }
+        .header {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 12px;
+            color: #0055ff;
+        }
+        .button {
+            display: inline-block;
+            margin-top: 18px;
+            padding: 12px 20px;
+            background-color: #0055ff;
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+        .footer {
+            margin-top: 18px;
+            font-size: 14px;
+            color: #999999;
+        }
+        .main-iink {
+            color: white;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">Turbo Built</div>
+        <p>You’re invited to join the <%= organization.name %> team!</p>
+        <p>Click below to accept your invitation:</p>
+        <a class="button" href="<%= acceptUrl %>">Join Now</a>
+        <div class="footer">
+        © <%= new Date().getFullYear() %> Turbo Built<br/>
+            <a href="https://turbobuilt.com" class="main-link">www.turbobuilt.com</a>
+        </div>
+    </div>
+</body>
+</html>

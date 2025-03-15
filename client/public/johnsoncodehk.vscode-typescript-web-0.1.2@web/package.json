@@ -1,0 +1,100 @@
+{
+	"private": true,
+	"name": "vscode-typescript-web",
+	"version": "0.1.2",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/volarjs/vscode-typescript-web.git"
+	},
+	"categories": [
+		"Programming Languages"
+	],
+	"sponsor": {
+		"url": "https://github.com/sponsors/johnsoncodehk"
+	},
+	"icon": "images/icon.png",
+	"displayName": "TypeScript IntelliSense for Web",
+	"description": "Support TypeScript IntelliSense for Web IDE",
+	"author": "johnsoncodehk",
+	"publisher": "johnsoncodehk",
+	"engines": {
+		"vscode": "^1.82.0"
+	},
+	"activationEvents": [
+		"onLanguage:vue",
+		"onLanguage:javascript",
+		"onLanguage:typescript",
+		"onLanguage:javascriptreact",
+		"onLanguage:typescriptreact"
+	],
+	"browser": "dist/client.js",
+	"contributes": {
+		"languages": [
+			{
+				"id": "vue",
+				"extensions": [
+					".vue"
+				]
+			}
+		],
+		"configuration": {
+			"type": "object",
+			"title": "TypeScript Web",
+			"properties": {
+				"typescript-web.trace.server": {
+					"scope": "window",
+					"type": "string",
+					"enum": [
+						"off",
+						"messages",
+						"verbose"
+					],
+					"default": "off",
+					"description": "Traces the communication between VS Code and the language server."
+				},
+				"typescript-web.dts.globals": {
+					"type": "array",
+					"items": {
+						"type": "string"
+					},
+					"default": [
+						"@types/node"
+					],
+					"description": "Automatically download the module list of the type from the cdn even if it is not imported by any script."
+				},
+				"typescript-web.dts.versions": {
+					"type": "object",
+					"description": "Specify the version of TypeScript to use for JavaScript and TypeScript files."
+				},
+				"typescript-web.supportVue": {
+					"type": "boolean",
+					"default": true,
+					"description": "Support Vue SFC."
+				}
+			}
+		}
+	},
+	"scripts": {
+		"build": "node scripts/build",
+		"watch": "npm run build -- --watch",
+		"pack": "npm run build && vsce package --no-dependencies",
+		"release": "npm run build && vsce publish --no-dependencies --target web",
+		"pre-release": "npm run build && vsce publish --no-dependencies --target web --pre-release",
+		"chrome": "vscode-test-web --browserType=chromium --extensionDevelopmentPath=. ../volar-starter"
+	},
+	"devDependencies": {
+		"@types/vscode": "^1.82.0",
+		"@volar/jsdelivr": "~2.4.0-alpha.12",
+		"@volar/language-server": "~2.4.0-alpha.12",
+		"@volar/vscode": "~2.4.0-alpha.12",
+		"@vscode/test-web": "latest",
+		"@vscode/vsce": "latest",
+		"@vue/language-service": "2.0.26-alpha.2",
+		"esbuild": "latest",
+		"esbuild-plugin-copy": "latest",
+		"typescript": "latest",
+		"volar-service-typescript": "volar-2.4",
+		"vscode-uri": "^3.0.8"
+	},
+	"packageManager": "pnpm@9.4.0"
+}

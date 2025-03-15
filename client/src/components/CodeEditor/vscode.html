@@ -1,0 +1,66 @@
+<!-- Copyright (C) Microsoft Corporation. All rights reserved. -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+
+    <!-- Mobile tweaks -->
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="Code" />
+    <link rel="apple-touch-icon" href="/code-192.png" />
+
+    <!-- Disable pinch zooming -->
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"
+    />
+
+    <!-- Workbench Icon/Manifest/CSS -->
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="manifest" href="/manifest.json" />
+    <link data-name="vs/workbench/workbench.web.main" rel="stylesheet" href="./node_modules/vscode-web/dist/out/vs/workbench/workbench.web.main.css" />
+  </head>
+
+  <body aria-label=""></body>
+
+  <!-- Startup (do not modify order of script tags!) -->
+  <script src="/node_modules/vscode-web/dist/out/vs/loader.js"></script>
+  <script src="/node_modules/vscode-web/dist/out/vs/webPackagePaths.js"></script>
+  <script>
+
+    // listen to messages from the iframe
+    window.addEventListener('message', message => {
+        console.log("GOT MESSAGE", message)
+        let messagePort = message.data.data;
+        let vscodeWebWorkerExtHostId = message.data.vscodeWebWorkerExtHostId;
+        // after 5 seconds, send a message hello world
+        setTimeout(() => {
+            console.log(message.data, "is port")
+            // post array buffer
+            messagePort.postMessage(new TextEncoder().encode('Hello World').buffer);
+        }, 5000);
+    });
+
+    window.editorId = "EDITOR_ID";
+    console.log("origin is", window.location.origin);
+    Object.keys(self.webPackagePaths).map(function (key, index) {
+      self.webPackagePaths[
+        key
+      ] = `ORIGIN/node_modules/vscode-web/dist/node_modules/${key}/${self.webPackagePaths[key]}`;
+    });
+    require.config({
+      baseUrl: `ORIGIN/node_modules/vscode-web/dist/out`,
+      recordStats: true,
+      trustedTypesPolicy: window.trustedTypes?.createPolicy('amdLoader', {
+        createScriptURL(value) {
+          return value;
+        },
+      }),
+      paths: self.webPackagePaths,
+    });
+  </script>
+  <script src="/node_modules/vscode-web/dist/out/vs/workbench/workbench.web.main.nls.js"></script>
+  <script src="/node_modules/vscode-web/dist/out/vs/workbench/workbench.web.main.js"></script>
+  <script src="/node_modules/vscode-web/dist/out/vs/code/browser/workbench/workbench.js"></script>
+</html>
