@@ -6,5 +6,5 @@ export default function saveWebsitePageItem(websitePageItemData: {
     websitePage?: string,
     item?: string,
 }) {
-    return callMethod("websitePageItem.saveWebsitePageItem", [...arguments]) as Promise<{ error?: string, data: { websitePageItem: WebsitePageItem; } }>;
+    return callMethod("websitePageItem.saveWebsitePageItem", [...arguments]) as Promise<{ error?: string, data: { websitePageItem: import("/home/me/turbobuilt/server/src/methods/websitePageItem/WebsitePageItem.model").WebsitePageItem; } }>;
 };

@@ -8,7 +8,7 @@
     "@sebastianwessel/quickjs": "^1.3.0",
     "acme-client": "^5.4.0",
     "axios": "^1.7.2",
-    "bcrypt": "^5.1.1",
+    "bcryptjs": "^3.0.2",
     "bs58": "^6.0.0",
     "bun-promptx": "^0.2.0",
     "cron": "^4.0.0",

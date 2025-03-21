@@ -1,4 +1,4 @@
-import { DbObject } from "../DbObject.model";
+import { DbObject } from "../../DbObject.model";
 
 export class User extends DbObject {
     displayName?: string;

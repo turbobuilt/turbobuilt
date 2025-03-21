@@ -7,5 +7,5 @@ export default function saveWebsiteItem(websiteItemData: {
     item?: string,
     url: string
 }) {
-    return callMethod("websiteItem.saveWebsiteItem", [...arguments]) as Promise<{ error?: string, data: { websiteItem: WebsiteItem; } }>;
+    return callMethod("websiteItem.saveWebsiteItem", [...arguments]) as Promise<{ error?: string, data: { websiteItem: import("/home/me/turbobuilt/server/src/methods/websiteItem/WebsiteItem.model").WebsiteItem; } }>;
 };

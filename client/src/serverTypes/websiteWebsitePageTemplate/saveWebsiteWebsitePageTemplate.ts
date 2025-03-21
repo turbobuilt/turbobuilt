@@ -7,5 +7,5 @@ export default function saveWebsiteWebsitePageTemplate(websiteWebsitePageTemplat
     websitePageTemplate?: string,
     url: string
 }) {
-    return callMethod("websiteWebsitePageTemplate.saveWebsiteWebsitePageTemplate", [...arguments]) as Promise<{ error?: string, data: { websiteWebsitePageTemplate: WebsiteWebsitePageTemplate; } }>;
+    return callMethod("websiteWebsitePageTemplate.saveWebsiteWebsitePageTemplate", [...arguments]) as Promise<{ error?: string, data: { websiteWebsitePageTemplate: import("/home/me/turbobuilt/server/src/methods/websiteWebsitePageTemplate/WebsiteWebsitePageTemplate.model").WebsiteWebsitePageTemplate; } }>;
 };

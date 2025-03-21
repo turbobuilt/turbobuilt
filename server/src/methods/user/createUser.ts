@@ -13,7 +13,7 @@ Step-by-step implementation plan:
 */
 
 import crypto from 'crypto';
-import bcrypt from 'bcrypt';
+import bcrypt from 'bcryptjs';
 import { User } from './models/User.model';
 import { Organization } from '../organization/Organization.model';
 import db from '../../lib/db';

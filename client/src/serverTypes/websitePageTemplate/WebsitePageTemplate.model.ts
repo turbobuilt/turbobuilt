@@ -7,7 +7,6 @@ export class WebsitePageTemplate extends DbObject {
     organization: string;
     defaultUrl?: WebsitePageTemplateUrlSegment;
     addToAllSites?: boolean;
-    urlOverride?: boolean;
     content: { blocks: WebsitePageTemplateBlock[]; } = {
                 blocks: [] as WebsitePageTemplateBlock[]
             };

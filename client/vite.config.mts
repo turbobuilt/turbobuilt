@@ -5,14 +5,17 @@ import Vuetify, { transformAssetUrls } from 'vite-plugin-vuetify'
 import ViteFonts from 'unplugin-fonts/vite'
 import VueRouter from 'unplugin-vue-router/vite'
 import * as fs from "fs";
+import basicSsl from '@vitejs/plugin-basic-ssl'
 
 // Utilities
 import { defineConfig } from 'vite'
 import { fileURLToPath, URL } from 'node:url'
+import mkcert from 'vite-plugin-mkcert'
 
 // https://vitejs.dev/config/
 export default defineConfig({
     plugins: [
+        basicSsl(),
         VueRouter(),
         Vue({
             template: { transformAssetUrls },
@@ -71,10 +74,10 @@ export default defineConfig({
                 changeOrigin: false,
             }
         },
-        https: {
-            key: fs.readFileSync('./certs/smarthost.co.key'),
-            cert: fs.readFileSync('./certs/smarthost.co.crt'),
-        }
+        // https: {
+        //     key: fs.readFileSync('./certs/smarthost.co.key'),
+        //     cert: fs.readFileSync('./certs/smarthost.co.crt'),
+        // }
     },
     optimizeDeps: {
         exclude: ['vscode-web',"@jsquash/resize"],

@@ -6,5 +6,5 @@ export default function deleteWebsiteWebsitePageTemplate({
     websiteGuid,
     websitePageTemplateGuid
 }) {
-    return callMethod("websiteWebsitePageTemplate.deleteWebsiteWebsitePageTemplate", [...arguments]) as Promise<{ error?: string, data: { websiteWebsitePageTemplate: WebsiteWebsitePageTemplate; } }>;
+    return callMethod("websiteWebsitePageTemplate.deleteWebsiteWebsitePageTemplate", [...arguments]) as Promise<{ error?: string, data: { websiteWebsitePageTemplate: import("/home/me/turbobuilt/server/src/methods/websiteWebsitePageTemplate/WebsiteWebsitePageTemplate.model").WebsiteWebsitePageTemplate; } }>;
 };
